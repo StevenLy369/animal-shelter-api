@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
 using Microsoft.AspNetCore.Authorization;
+using System;
 
 namespace AnimalShelter.Controller
 {
@@ -69,6 +70,13 @@ namespace AnimalShelter.Controller
             var animalToDelete = _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
             _db.Animals.Remove(animalToDelete);
             _db.SaveChanges();
+        }
+        [HttpGet("random")]
+        public ActionResult<Animal> GetRandom()
+        {
+            Random rand = new Random();
+            int toSkip = rand.Next(0, _db.Animals.Count());
+            return _db.Animals.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First();
         }
 
     }
