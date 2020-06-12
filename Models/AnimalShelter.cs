@@ -14,5 +14,6 @@ namespace AnimalShelter.Models
 
         public string Name {get;set;}
         public string Details {get;set;}
+        public string Breed {get;set;}
     }
 }
