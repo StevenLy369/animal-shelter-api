@@ -71,6 +71,8 @@ namespace AnimalShelter.Controller
             _db.Animals.Remove(animalToDelete);
             _db.SaveChanges();
         }
+
+        //api/animal/random
         [HttpGet("random")]
         public ActionResult<Animal> GetRandom()
         {
