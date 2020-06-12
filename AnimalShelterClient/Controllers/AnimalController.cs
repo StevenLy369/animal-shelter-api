@@ -10,7 +10,7 @@ namespace AnimalShelterClient.Controllers
 {
     public class AnimalsController : Controller
     {
-
+        [HttpGet("/index")]
         public IActionResult Index()
         {
             var allAnimals = Animal.GetAnimals();
