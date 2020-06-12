@@ -20,11 +20,11 @@ _A project that has CRUD functionaility as well as Swagger implemented_
   ```
   {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=YOUR PORT NUMBER HERE;database=[DATABASE NAME AS YOU SAVED IT];uid=YOUR USER ID HERE;pwd=[YOUR PASSWORD HERE];"
+    "DefaultConnection": "Server=localhost;Port=[YOUR PORT NUMBER HERE];database=[DATABASE NAME AS YOU SAVED IT];uid=YOUR USER ID HERE;pwd=[YOUR PASSWORD HERE];"
   }
 }
 ```
-6. To run MySQL migrations and create a database in your MySQL installation, enter the following command in your terminal: ```dotnet ef migrations add Initial && dotnet ef database update```.
+6. To run MySQL migrations and create a database in your MySQL installation, enter the following command in your terminal: ```dotnet ef migrations``` add ```Initial && dotnet ef database update```.
 7. This API uses Swagger. To launch the Swagger/OpenAPI utility in your browser, from the project directory in your terminal, enter ```dotnet run``` and open a browser page at localhost:5000.  You can now see all API routes grouped by controller.  Clicking on a route will expand it and show details of that route, and give you the option to "Try It Out."
 
 
