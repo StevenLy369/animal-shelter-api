@@ -40,6 +40,11 @@ namespace AnimalShelter.Controller
       }
       return query.ToList();
     }
+    [HttpGet("{id}")]
+    public ActionResult<Animal> GetAction(int id)
+    {
+      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
+    }
 
   }
 }
