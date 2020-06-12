@@ -12,3 +12,5 @@ C:\Users\Steven\Desktop\epi\c#\animalshelterapi\obj\Debug\netcoreapp2.2\animalsh
 C:\Users\Steven\Desktop\epi\c#\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.RazorTargetAssemblyInfo.cache
 C:\Users\Steven\Desktop\epi\c#\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.dll
 C:\Users\Steven\Desktop\epi\c#\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.pdb
+C:\Users\Steven\Desktop\epi\c#\animalshelterapi\bin\Debug\netcoreapp2.2\animalshelterapi.xml
+C:\Users\Steven\Desktop\epi\c#\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.xml

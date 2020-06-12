@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using AnimalShelter.Models;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
+using System.IO;
 
 namespace AnimalShelter
 {
@@ -33,7 +35,14 @@ namespace AnimalShelter
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerGen(c =>
     {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Animal Shelter", Version = "v1" });
+        c.SwaggerDoc("v1", new OpenApiInfo { 
+            Title = "Animal Shelter", 
+            Version = "v1", 
+            Description = "Database of user-posted animals",
+            Contact = new OpenApiContact
+            {
+                Name= "Steven Ly"
+            }});
     });
 
         }
@@ -45,6 +54,7 @@ namespace AnimalShelter
             app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                    c.RoutePrefix = string.Empty;
                 });
             if (env.IsDevelopment())
             {
