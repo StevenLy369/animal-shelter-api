@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace Pupper.Controller
+namespace AnimalShelter.Controller
 {
-  [Authorize]
+ 
   [Route("api/[controller]")]
   [ApiController]
   public class AnimalsController : ControllerBase
@@ -19,8 +19,9 @@ namespace Pupper.Controller
       _db = db;
     }
 
-    [AllowAnonymous]
+
     // GET api/animals
+       
     [HttpGet]
     public ActionResult<IEnumerable<Animal>> Get(string name, string details, string breed)
     {
@@ -39,5 +40,6 @@ namespace Pupper.Controller
       }
       return query.ToList();
     }
+
   }
 }
